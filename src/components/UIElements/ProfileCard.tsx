@@ -1,5 +1,5 @@
 ﻿import {type ChangeEvent, useRef, useState} from "react";
-import {GavelIcon, GhostIcon, KnifeIcon, UserIcon} from "@phosphor-icons/react";
+import {GavelIcon, GhostIcon, KnifeIcon} from "@phosphor-icons/react";
 
 interface ProfileCardProps {
     index: number;
@@ -46,9 +46,9 @@ export function ProfileCard({index, onPutOnBlock, isOnBlock, onDeadStatusChange,
         }
     };
 
-    const handleImageClick = () => {
-        fileInputRef.current?.click();
-    };
+    // const handleImageClick = () => {
+    //     fileInputRef.current?.click();
+    // };
 
     const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];
