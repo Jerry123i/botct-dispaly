@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@layer base {
+  h1 {
+    font-size: var(--text-3xl);
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+  }
+
+  @theme {
+    --color-ct-paper-light: #f7f0df;
+    --color-ct-paper-medium: #ddcebb;
+    --color-ct-paper-dark: #b09780;
+    --color-ct-paper-darker: #aa988d;
+
+    --color-ct-blue-light: #0097c7;
+    --color-ct-blue-dark: #006c9b;
+    --color-ct-blue-medium: #004b9f;
+
+    --color-ct-red-light: #a71216;
+    --color-ct-red-medium: #850e11;
+    --color-ct-red-dark: #59080a;
+  }
+
+  .role-image{
+    @apply w-17 h-17 rounded-full flex-shrink-0 mt-0.5;
+  }
+
+  .role-text{
+    @apply text-sm text-gray-900;
+  }
+
+  .input-field{
+    @apply bg-gray-50 p-1 placeholder:text-gray-300 rounded-md;
+  }
+}

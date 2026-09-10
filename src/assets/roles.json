@@ -1,0 +1,120 @@
+{
+  "citizen": [
+    {
+      "name": "Chef",
+      "icon": "https://wiki.bloodontheclocktower.com/images/d/d5/Icon_chef.png",
+      "description": "Você começa sabendo quantos pares de jogadores do mal existem.."
+    },
+    {
+      "name": "Investigador",
+      "icon": "https://wiki.bloodontheclocktower.com/images/a/ad/Icon_investigator.png",
+      "description": "Você começa sabendo que 1 dentre 2 jogadores é um Lacaio específico."
+    },
+    {
+      "name": "Lavadeira",
+      "icon": "https://wiki.bloodontheclocktower.com/images/8/85/Icon_washerwoman.png",
+      "description": "Você começa sabendo que 1 dentre 2 jogadores é um Cidadão específico."
+    },
+    {
+      "name": "Bibliotecária",
+      "icon": "https://wiki.bloodontheclocktower.com/images/e/e0/Icon_librarian.png",
+      "description": "Você começa sabendo que 1 dentre 2 jogadores é um Forasteiro específico. (Ou que há zero Forasteiros em jogo.)"
+    },
+    {
+      "name": "Empático",
+      "icon": "https://wiki.bloodontheclocktower.com/images/1/13/Icon_empath.png",
+      "description": "A cada noite, saiba quantos de seus 2 vizinhos vivos são do mal."
+    },
+    {
+      "name": "Vidente",
+      "icon": "https://wiki.bloodontheclocktower.com/images/9/97/Icon_fortuneteller.png",
+      "description": "A cada noite, escolha 2 jogadores: saiba se dentre eles há um Demônio. Há um jogador do bem que é registrado como Demônio para você."
+    },
+    {
+      "name": "Coveiro",
+      "icon": "https://wiki.bloodontheclocktower.com/images/0/05/Icon_undertaker.png",
+      "description": "A cada noite*, aprenda qual personagem morreu por execução hoje."
+    },
+    {
+      "name": "Monge",
+      "icon": "https://wiki.bloodontheclocktower.com/images/7/7c/Icon_monk.png",
+      "description": "A cada noite*, escolha um jogador (exceto você): ele está a salvo do Demônio esta noite."
+    },
+    {
+      "name": "Atirador",
+      "icon": "https://wiki.bloodontheclocktower.com/images/d/d3/Icon_slayer.png",
+      "description": "Uma vez por jogo, durante o dia, escolha um jogador publicamente: se ele for o Demônio, ele morre."
+    },
+    {
+      "name": "Soldado",
+      "icon": "https://wiki.bloodontheclocktower.com/images/c/c3/Icon_soldier.png",
+      "description": "Você está a salvo do Demônio."
+    },
+    {
+      "name": "Mestre dos Corvos",
+      "icon": "https://wiki.bloodontheclocktower.com/images/e/ef/Icon_ravenkeeper.png",
+      "description": "Se você morrer à noite, você é acordado para escolher um jogador: aprenda o personagem dele."
+    },
+    {
+      "name": "Prefeito",
+      "icon": "https://wiki.bloodontheclocktower.com/images/a/a1/Icon_mayor.png",
+      "description": "Se apenas 3 jogadores estão vivos e não houver execução, o seu time vence. Se você for morrer à noite, outro jogador pode morrer em vez disso."
+    },
+    {
+      "name": "Virgem",
+      "icon": "https://wiki.bloodontheclocktower.com/images/d/d3/Icon_virgin.png",
+      "description": "Na 1ª vez que você é nomeado, se o nomeador for um Cidadão, ele é executado imediatamente."
+    }
+  ],
+  "outsider": [
+    {
+      "name": "Mordomo",
+      "icon": "https://wiki.bloodontheclocktower.com/images/1/19/Icon_butler.png",
+      "description": "A cada noite, escolha um jogador (exceto você): amanhã, você só poderá votar enquanto ele estiver votando também."
+    },
+    {
+      "name": "Bêbado",
+      "icon": "https://wiki.bloodontheclocktower.com/images/4/4a/Icon_drunk.png",
+      "description": "Você não sabe que é o Bêbado. Você acha que é um Cidadão, mas não é."
+    },
+    {
+      "name": "Recluso",
+      "icon": "https://wiki.bloodontheclocktower.com/images/6/60/Icon_recluse.png",
+      "description": "Você pode ser registrado como se fosse do mal e um Demônio ou Lacaio, mesmo quando morto."
+    },
+    {
+      "name": "Santo",
+      "icon": "https://wiki.bloodontheclocktower.com/images/c/c9/Icon_saint.png",
+      "description": "Se você morrer por execução, o seu time perde."
+    }
+  ],
+  "minion": [
+    {
+      "name": "Envenenador",
+      "icon": "https://wiki.bloodontheclocktower.com/images/b/b1/Icon_poisoner.png",
+      "description": "A cada noite, escolha um jogador: ele fica envenenado até o anoitecer."
+    },
+    {
+      "name": "Espião",
+      "icon": "https://wiki.bloodontheclocktower.com/images/5/54/Icon_spy.png",
+      "description": "A cada noite, você vê o Grimório. Você pode ser registrado como se fosse do bem e um Cidadão ou Forasteiro, mesmo morto."
+    },
+    {
+      "name": "Mulher Escarlate",
+      "icon": "https://wiki.bloodontheclocktower.com/images/1/13/Icon_scarletwoman.png",
+      "description": "Se há 5 ou mais jogadores vivos e o Demônio morrer, você se torna o Demônio. (Viajantes não contam.)"
+    },
+    {
+      "name": "Barão",
+      "icon": "https://wiki.bloodontheclocktower.com/images/6/6d/Icon_baron.png",
+      "description": "Há Forasteiros adicionais em jogo. [+2 Forasteiros]"
+    }
+  ],
+  "demon": [
+    {
+      "name": "Capeta",
+      "icon": "https://wiki.bloodontheclocktower.com/images/5/5c/Icon_imp.png",
+      "description": "A cada noite*, escolha um jogador: ele morre. Se você se matar dessa forma, um Lacaio se torna o Capeta."
+    }
+  ]
+}
