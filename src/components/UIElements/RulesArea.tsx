@@ -82,14 +82,14 @@ function RoleSection({ title, alignment, roles }: RoleSectionProps) {
 export function RulesArea(showRules: boolean, showRulesSetter: (a: boolean) => void) {
     return (
         <div
-            className={`fixed inset-0 bg-gradient-to-tr from-stone-900 to-black transition-transform duration-500 ease-in-out ${
+            className={`fixed inset-0 bg-linear-to-tr from-stone-900 to-black transition-transform duration-500 ease-in-out ${
                 showRules ? 'translate-x-0' : 'translate-x-full'
-            } overflow-auto p-8`}
+            } overflow-auto p-1.5`}
         >
-            <div className="max-w-8xl mx-auto relative">
+            <div className="max-w-8xl mx-auto relative ">
                 <button
                     onClick={() => showRulesSetter(false)}
-                    className="fixed left-4 top-1/2 -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition-colors z-10"
+                    className="fixed left-4 bottom-4 -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition-colors z-10"
                     title="Back to player tracker"
                 >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -97,7 +97,7 @@ export function RulesArea(showRules: boolean, showRulesSetter: (a: boolean) => v
                     </svg>
                 </button>
 
-                <div className="bg-gradient-to-bl from-stone-300 to-ct-paper-medium rounded-2xl shadow-lg px-8 py-4">
+                <div className="bg-linear-to-bl from-stone-300 to-ct-paper-medium rounded-2xl shadow-lg px-8 py-4">
                     <div className="grid md:grid-cols-2 gap-8">
                         <RoleSection title="CIDADÃOS" alignment="citizen" roles={loadedRoles.citizen} />
 

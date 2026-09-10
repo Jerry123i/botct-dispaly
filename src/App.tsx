@@ -110,18 +110,20 @@ export default function App() {
   }
 
   return (
-      <div className="min-h-screen bg-gradient-to-tr from-stone-900 to-black overflow-hidden relative">
-        <div className={`transition-transform duration-500 ease-in-out p-8 ${showRules ? '-translate-x-full' : 'translate-x-0'}`}>
+      <div className="min-h-screen bg-linear-to-tr from-stone-900 to-black overflow-hidden relative">
+        <div className={`transition-transform duration-500 ease-in-out p-8 h-screen ${showRules ? '-translate-x-full' : 'translate-x-0'}`}>
+
+          <button
+              onClick={() => setShowRules(true)}
+              className="fixed right-4 bottom-4 -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition-colors z-10"
+              title="View game rules"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+          
           <div className="max-w-8xl mx-auto relative">
-            <button
-                onClick={() => setShowRules(true)}
-                className="fixed right-4 bottom-4 -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition-colors z-10"
-                title="View game rules"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
 
             <div className="flex gap-6">
               <div className="w-80 flex-shrink-0 space-y-4">
