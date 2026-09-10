@@ -73,7 +73,7 @@ export default function App() {
 
   if (!started) {
     return (
-        <div className="min-h-screen bg-linear-to-tr from-stone-900 to-black flex items-center justify-center p-4">
+        <div className="min-h-screen bg-[#191513] flex items-center justify-center p-4">
           <div className="bg-ct-paper-medium rounded-2xl shadow-lg p-12 max-w-md w-full">
             <div className="flex justify-center mb-6">
               <img src={botctLogo} alt={""}></img>
@@ -89,13 +89,13 @@ export default function App() {
                   onChange={(e) => setNumPlayers(e.target.value)}
                   onKeyDown={handleKeyDown}
                   placeholder="Número de jogadores    "
-                  className="w-full text-lg px-4 py-3 border-2 border-stone-600 rounded-lg focus:outline-none focus:border-ct-blue-dark focus:ring-2 focus:ring-indigo-200 transition-all"
+                  className="w-full text-lg px-4 py-3 border-2 border-stone-600 rounded-lg focus:outline-none transition-all"
                   autoFocus
               />
               <button
                   onClick={handleStart}
                   disabled={!numPlayers || parseInt(numPlayers) <= 0 || parseInt(numPlayers) > 20}
-                  className="w-full bg-ct-blue-dark text-white font-semibold py-3 px-6 rounded-lg hover:bg-ct-blue-medium disabled:bg-neutral-600 disabled:cursor-not-allowed transition-colors"
+                  className="w-full bg-ct-blue-dark text-white font-semibold py-3 px-6 rounded-lg  transition-colors"
               >
                 Começar
               </button>
@@ -110,12 +110,12 @@ export default function App() {
   }
 
   return (
-      <div className="min-h-screen bg-linear-to-tr from-stone-900 to-black overflow-hidden relative">
+      <div className="min-h-screen bg-black overflow-hidden relative">
         <div className={`transition-transform duration-500 ease-in-out p-8 h-screen ${showRules ? '-translate-x-full' : 'translate-x-0'}`}>
 
           <button
               onClick={() => setShowRules(true)}
-              className="fixed right-4 bottom-4 -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition-colors z-10"
+              className="fixed right-4 bottom-4 -translate-y-1/2 bg-red-600 text-white p-3 rounded-full shadow-lg transition-colors z-10"
               title="View game rules"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

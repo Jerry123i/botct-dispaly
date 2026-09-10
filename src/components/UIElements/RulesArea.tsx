@@ -50,7 +50,7 @@ const loadedRoles = roles as Script;
 
 function RoleCard({ name, description, icon, alignment }: RoleCardProps) {
     return (
-        <div className="flex items-start gap-2 not-odd:bg-linear-to-r  not-odd:from-[#c8bbaf] to-color-ct-paper-light">
+        <div className="flex items-start gap-2 bg-[#c8bbaf]">
             <img src={icon} alt={name} className="role-image" />
             <div>
                 <h3 className={`mt-1.5 font-bold ${ALIGNMENT_TEXT_COLOR[alignment]}`}>{name}</h3>
@@ -89,7 +89,7 @@ export function RulesArea(showRules: boolean, showRulesSetter: (a: boolean) => v
             <div className="max-w-8xl mx-auto relative ">
                 <button
                     onClick={() => showRulesSetter(false)}
-                    className="fixed left-4 bottom-4 -translate-y-1/2 bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg transition-colors z-10"
+                    className="fixed left-4 bottom-4 -translate-y-1/2 bg-red-600  text-white p-3 rounded-full shadow-lg transition-colors z-10"
                     title="Back to player tracker"
                 >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -97,7 +97,7 @@ export function RulesArea(showRules: boolean, showRulesSetter: (a: boolean) => v
                     </svg>
                 </button>
 
-                <div className="bg-linear-to-bl from-stone-300 to-ct-paper-medium rounded-2xl shadow-lg px-8 py-4">
+                <div className="bg-stone-300  rounded-2xl shadow-lg px-8 py-4">
                     <div className="grid md:grid-cols-2 gap-8">
                         <RoleSection title="CIDADÃOS" alignment="citizen" roles={loadedRoles.citizen} />
 
