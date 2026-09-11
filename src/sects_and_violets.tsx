@@ -152,6 +152,7 @@ const vortox = {
 
 export const sectsAndViolets : Script = {
     name : "Sects And Violets",
+    qrCode: "src/assets/violets_qr.jpg",
     citizen: [
         clockmaker,
         dreamer,

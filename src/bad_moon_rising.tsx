@@ -152,6 +152,7 @@ const po = {
 
 export const badMoonRising : Script = {
     name: "Bad Moon Rising",
+    qrCode: "src/assets/bad_moon_qr.jpg",
     citizen: [
         grandmother,
         sailor,

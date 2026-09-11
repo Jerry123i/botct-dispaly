@@ -209,6 +209,10 @@ export default function App() {
                   )}
                 </div>
 
+                <div className={"w-auto flex items-center justify-center"}>
+                  <img className={"max-h-80"} src={selectedScript.qrCode} alt={"qrcode"}></img>
+                </div>
+                
                 {/*<button*/}
                 {/*    onClick={() => setIsNight(true)}*/}
                 {/*    className="w-full bg-ct-blue-medium hover:bg-ct-blue-dark text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"*/}

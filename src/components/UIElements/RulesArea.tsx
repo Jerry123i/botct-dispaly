@@ -8,6 +8,7 @@ export interface Role {
 
 export interface Script{
     name: string;
+    qrCode: string;
     citizen: Role[],
     outsider: Role[],
     minion: Role[],

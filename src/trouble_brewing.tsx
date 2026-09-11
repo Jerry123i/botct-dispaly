@@ -134,6 +134,7 @@ const imp : Role = {
 
 export const troubleBrewing :Script = {
     name: "Trouble Brewing",
+    qrCode: "src/assets/trouble_brewing_qr.jpg",
     citizen: [
         washerwoman,
         librarian,
