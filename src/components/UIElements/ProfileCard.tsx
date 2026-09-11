@@ -77,7 +77,7 @@ export function ProfileCard({index, onPutOnBlock, isOnBlock, onDeadStatusChange,
     };
 
     return (
-        <div className={`flex items-center gap-4 p-4 transition-colors ${
+        <div className={`flex items-center gap-4 p-4 transition-colors min-h-28 ${
                 isDead
                     ? 'bg-neutral-500'
                     : 'bg-ct-paper-light '
@@ -116,7 +116,7 @@ export function ProfileCard({index, onPutOnBlock, isOnBlock, onDeadStatusChange,
                         <div className="flex items-center gap-0">
                             <div
                                 onClick={handleNameClick}
-                                className={`text-xl font-semibold cursor-pointer py-2 pr-2
+                                className={`text-[28px] font-semibold cursor-pointer py-0.5 pr-2
                                 ${isOnBlock?'text-ct-red-medium':
                                     isDead ? ghostVote? 'text-gray-50' :'text-neutral-700 hover:text-gray-100' : 'text-neutral-800 '
                                 }`}
@@ -139,7 +139,7 @@ export function ProfileCard({index, onPutOnBlock, isOnBlock, onDeadStatusChange,
                                     className={`p-1.5 rounded-lg transition-colors ${
                                         isOnBlock
                                             ? 'bg-ct-red-medium cursor-not-allowed'
-                                            : 'hover:bg-yellow-100'
+                                            : 'hover:hover:bg-gray-500'
                                     }`}
                                     title="Put on the block"
                                 >
@@ -157,8 +157,8 @@ export function ProfileCard({index, onPutOnBlock, isOnBlock, onDeadStatusChange,
                                 {ghostVote?
                                     <GhostIcon className={`w-6 h-6`} weight={"fill"} />:
                                     <GhostIcon className={`w-6 h-6 opacity-40`} />}
-                                <span className="text-m">
-                                    {ghostVote ? 'Has Vote' : ''}
+                                <span className="text-lg font-semibold ">
+                                    {ghostVote ? 'Voto Fantasma' : ''}
                                 </span>
                             </button>
                         )}

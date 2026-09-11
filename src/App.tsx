@@ -59,6 +59,9 @@ export default function App() {
             p.index === playerIndex ? { ...p, isDead } : p
         )
     );
+    if (playerIndex === playerOnBlock?.index) {
+      handleRemoveFromBlock();
+    }
   };
 
   const handleWakeUp = () => {
@@ -89,13 +92,13 @@ export default function App() {
                   onChange={(e) => setNumPlayers(e.target.value)}
                   onKeyDown={handleKeyDown}
                   placeholder="Número de jogadores    "
-                  className="w-full text-lg px-4 py-3 border-2 border-stone-600 rounded-lg focus:outline-none focus:border-ct-blue-dark focus:ring-2 focus:ring-indigo-200 transition-all"
+                  className="w-full text-lg px-4 py-3 border-2 border-stone-600 rounded-lg focus:outline-none  focus:ring-2 focus:ring-indigo-200 transition-all"
                   autoFocus
               />
               <button
                   onClick={handleStart}
                   disabled={!numPlayers || parseInt(numPlayers) <= 0 || parseInt(numPlayers) > 20}
-                  className="w-full bg-ct-blue-dark text-white font-semibold py-3 px-6 rounded-lg hover:bg-ct-blue-medium disabled:bg-neutral-600 disabled:cursor-not-allowed transition-colors"
+                  className="w-full bg-ct-blue-dark text-white font-semibold py-3 px-6 rounded-lg hover:bg-ct-blue-medium disabled:cursor-not-allowed transition-colors"
               >
                 Começar
               </button>
@@ -125,21 +128,21 @@ export default function App() {
           
           <div className="max-w-8xl mx-auto relative">
 
-            <div className="flex gap-6">
-              <div className="w-80 flex-shrink-0 space-y-4">
+            <div className="flex gap-6 ">
+              <div className="w-125 shrink-0 space-y-4 ">
                 <div className="bg-ct-paper-dark rounded-md shadow-md p-6">
-                  <h2 className="text-sm font-semibold text-gray-600 mb-2 text-center">Votos para executar</h2>
+                  <h2 className="text-4xl font-semibold text-ct-red-dark mb-2 text-center">Mínimo de votos</h2>
                   <div className="text-6xl font-bold text-red-950 text-center">
                     {minVotesToExecute}
                   </div>
-                  <p className="text-s text-neutral-800-800 text-center mt-2">
+                  <p className="text-md text-neutral-800-800 text-center mt-2">
                     {alivePlayers} jogadores vivos
                   </p>
                 </div>
 
                 <div className="bg-ct-paper-dark rounded-md shadow-md p-6">
                   <div className="flex items-center justify-between mb-4">
-                    <h2 className="text-lg font-semibold text-stone-900">Jogador na forca</h2>
+                    <h2 className="text-3xl font-semibold text-stone-900">Jogador na forca</h2>
                     {playerOnBlock && (
                         <button
                             onClick={handleRemoveFromBlock}
@@ -181,8 +184,8 @@ export default function App() {
                             />
                           </div>
                           <div>
-                            <label className="text-md font-medium text-stone-900 block mb-1">Votos para executar</label>
-                            <div className="px-3 py-2 text-md bg-ct-paper-light border-2 border-neutral-500 rounded-lg text-lg font-semibold text-gray-800">
+                            <label className="text-lg font-medium text-stone-900 block mb-1">Votos para trocar</label>
+                            <div className="px-3 py-2 text-lg bg-ct-paper-light border-2 border-neutral-500 rounded-lg font-semibold text-gray-800">
                               {votesToExecute || '-'}
                             </div>
                           </div>
