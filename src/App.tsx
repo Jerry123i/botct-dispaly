@@ -209,9 +209,9 @@ export default function App() {
                   )}
                 </div>
 
-                <div className={"w-auto flex items-center justify-center"}>
-                  <img className={"max-h-80"} src={selectedScript.qrCode} alt={"qrcode"}></img>
-                </div>
+                {/*<div className={"w-auto flex items-center justify-center"}>*/}
+                {/*  <img className={"max-h-80"} src={selectedScript.qrCode} alt={"qrcode"}></img>*/}
+                {/*</div>*/}
                 
                 {/*<button*/}
                 {/*    onClick={() => setIsNight(true)}*/}
