@@ -1,13 +1,13 @@
-﻿import roles from "../../assets/roles.json";
-type Alignment = 'citizen' | 'outsider' | 'minion' | 'demon';
+﻿type Alignment = 'citizen' | 'outsider' | 'minion' | 'demon';
 
-interface Role {
+export interface Role {
     name: string;
     description: string;
     icon: string;
 }
 
-interface Script{
+export interface Script{
+    name: string;
     citizen: Role[],
     outsider: Role[],
     minion: Role[],
@@ -41,8 +41,6 @@ const ALIGNMENT_HEADER_COLOR: Record<Alignment, string> = {
     minion: 'text-ct-red-dark border-ct-red-dark',
     demon: 'text-red-900 border-red-900',
 }
-
-const loadedRoles = roles as Script;
 
 // ---------------------------------------------------------------------------
 // Presentational components
@@ -79,7 +77,7 @@ function RoleSection({ title, alignment, roles }: RoleSectionProps) {
 // RulesArea
 // ---------------------------------------------------------------------------
 
-export function RulesArea(showRules: boolean, showRulesSetter: (a: boolean) => void) {
+export function RulesArea(showRules: boolean, showRulesSetter: (a: boolean) => void, script : Script) {
     return (
         <div
             className={`fixed inset-0 bg-linear-to-tr from-stone-900 to-black transition-transform duration-500 ease-in-out ${
@@ -99,12 +97,12 @@ export function RulesArea(showRules: boolean, showRulesSetter: (a: boolean) => v
 
                 <div className="bg-linear-to-bl from-stone-300 to-ct-paper-medium rounded-2xl shadow-lg px-8 py-4">
                     <div className="grid md:grid-cols-2 gap-8">
-                        <RoleSection title="CIDADÃOS" alignment="citizen" roles={loadedRoles.citizen} />
+                        <RoleSection title="CIDADÃOS" alignment="citizen" roles={script.citizen} />
 
                         <div className="space-y-1.5">
-                            <RoleSection title="FORASTEIROS" alignment="outsider" roles={loadedRoles.outsider} />
-                            <RoleSection title="CAPANGAS" alignment="minion" roles={loadedRoles.minion} />
-                            <RoleSection title="DEMÔNIOS" alignment="demon" roles={loadedRoles.demon} />
+                            <RoleSection title="FORASTEIROS" alignment="outsider" roles={script.outsider} />
+                            <RoleSection title="LACAIOS" alignment="minion" roles={script.minion} />
+                            <RoleSection title="DEMÔNIOS" alignment="demon" roles={script.demon} />
                         </div>
                     </div>
 

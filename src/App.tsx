@@ -1,10 +1,13 @@
 import {useState} from "react";
 
 import {ProfileCard} from "./components/UIElements/ProfileCard.tsx";
-import {RulesArea} from "./components/UIElements/RulesArea.tsx";
+import {RulesArea, type Script} from "./components/UIElements/RulesArea.tsx";
 
 import botctLogo from "./assets/logo_black.png"
 import {GavelIcon, UserIcon, XIcon} from "@phosphor-icons/react";
+import {troubleBrewing} from "./trouble_brewing.tsx";
+import {badMoonRising} from "./bad_moon_rising.tsx";
+import {sectsAndViolets} from "./sects_and_violets.tsx";
 
 type Player = {
   index: number;
@@ -21,6 +24,8 @@ export default function App() {
   const [votesToTie, setVotesToTie] = useState('');
   const [showRules, setShowRules] = useState(false);
   const [isNight, setIsNight] = useState(false);
+  
+  const [selectedScript, setSelectedScript] = useState<Script>(troubleBrewing);
 
   const handleStart = () => {
     const count = parseInt(numPlayers);
@@ -83,7 +88,7 @@ export default function App() {
             </div>
             <h2 className="text-neutral-800 mb-8 text-center">Quantos jogadores?</h2>
 
-            <div className="space-y-4">
+            <div className="space-y-2">
               <input
                   type="number"
                   min="1"
@@ -104,9 +109,14 @@ export default function App() {
               </button>
             </div>
 
-            <p className="text-sm text-gray-500 mt-6 text-center">
+            <p className="text-sm text-gray-500 mt-1 text-center">
               Máximo 20 Jogadores
             </p>
+            
+            <div className={"mt-3 h-10 flex items-center justify-center"}>
+              <ScriptDropdown scripts={[troubleBrewing, badMoonRising, sectsAndViolets]} selectedScript={selectedScript} setSelectedScript={setSelectedScript}/>
+            </div>
+            
           </div>
         </div>
     );
@@ -242,8 +252,44 @@ export default function App() {
             </div>
         )}
 
-        {RulesArea(showRules, setShowRules)}
+        {RulesArea(showRules, setShowRules, selectedScript)}
 
       </div>
+  );
+}
+
+type ScriptDropdownProps = {
+  scripts: Script[];
+  selectedScript: Script | null;
+  setSelectedScript: (script: Script) => void;
+};
+
+function ScriptDropdown({
+                          scripts,
+                          selectedScript,
+                          setSelectedScript,
+                        }: ScriptDropdownProps) {
+  return (
+      <select
+          id={"scriptSelect"}
+          value={selectedScript?.name ?? ""}
+          onChange={(e) => {
+            const script = scripts.find(
+                (script) => script.name === e.target.value
+            );
+
+            if (script) {
+              setSelectedScript(script);
+            }
+          }}
+          className="rounded border border-ct-paper-darker bg-ct-paper-light px-3 py-2 w-full text-stone-950"
+      >
+
+        {scripts.map((script) => (
+            <option key={script.name} value={script.name}>
+              {script.name}
+            </option>
+        ))}
+      </select>
   );
 }
